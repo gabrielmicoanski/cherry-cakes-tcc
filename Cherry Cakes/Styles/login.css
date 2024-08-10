@@ -1,0 +1,176 @@
+/*============PAGE===============*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+header{
+    background-color: rgb(161, 90, 228);
+    width: 100%;
+    height: 50px;
+}
+
+
+/*==============FONTS============*/
+@font-face{
+    font-family: Padrao;
+    src:url("./My\ Love.ttf")
+}
+
+@font-face{
+    font-family: GeorgeCafe;
+    src:url("./Louis\ George\ Cafe\ Light.ttf")
+}
+
+@font-face{
+    font-family: SunnySpells;
+    src:url("./Sunny\ Spells\ Basic.ttf")
+}
+
+/*=================KEYFRAMES==================*/
+@keyframes colors{
+    0%{
+      background-position: 0%, 50%;
+    }
+
+    50%{
+      background-position: 100%, 50%;
+    }
+
+    100%{
+      background-position: 0%, 50%;
+    }
+  }
+
+/*=================TEXTOS=================*/
+#title_header{
+    text-align: right;
+    color: white;
+    font-family:Padrao;
+    font-size: 28px;
+    padding: 5px 10px 5px 0px;
+}
+
+.title1{
+    color: white;
+    text-align: center;
+    font-size: 130px;
+    font-family: Padrao;
+    padding-top:50px ;
+    padding-bottom: 100px;
+}
+.txt1{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    font-family: GeorgeCafe;
+}
+
+.txtarea{
+    top: 50px;
+    left: 50px;
+    color: white;
+    position: absolute;
+    text-align: center;
+}
+
+.info_area_txt1{
+    font-family: GeorgeCafe;
+    font-size: 20px;
+}
+
+.info_area_txt2{
+    font-family: GeorgeCafe;
+    font-size: 15px;
+    padding:4px ;
+}
+/*=======================CONTENTS===================*/
+.content{
+    display: flex;
+    justify-content: space-evenly;
+    width: auto;
+    top: 0;
+    bottom: 0;
+    height: auto;
+}
+
+
+.right_content{
+    background-color: white;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: auto;
+    width: 700px;
+}
+
+
+
+.left_content{
+    position: relative;
+    top: 0;
+    bottom: 0;
+    height: 780px;
+    background-color: rgb(0, 0, 0);
+    
+}
+
+.left_content img{
+    height: 780px;
+    opacity: 0.5;
+}
+
+/*===================LOGIN===================*/
+.login_area{
+    margin-left: 160px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info_area{
+    margin-left: 70px;
+    margin-top: 20px;
+}
+/*===========BUTTONS===============*/
+.btn_pedir{
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 15px;
+    width: 400px;
+    height: 40px;
+    background:linear-gradient(to right, rgb(98, 31, 255),rgb(249, 85, 255));
+    background-size: 200%, 200%;
+    animation:colors 5s ease infinite;
+    margin-top: 50px;
+}
+
+.btn_entrar_google{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 200px;
+    background-color: white;
+    margin-top: 20px;
+}
+
+/*=================HOVER===================*/
+.btn_pedir:hover{
+    background:linear-gradient(to right, rgba(98, 31, 255, 0.9),rgba(249, 85, 255, 0.9));
+    width: 430px;
+    height: 45px;
+    transition: 1s;
+}
+
+.btn_entrar_google:hover{
+    opacity: 0.6;
+}
+    
+
+
+
+
+

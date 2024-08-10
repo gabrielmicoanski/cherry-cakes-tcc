@@ -1,0 +1,71 @@
+.boxlogin form{
+    display: flex;
+    flex-direction:column;
+    margin-top: -20px;
+}
+
+.boxlogin{
+    background-color: rgb(247, 0, 255,0.3);
+    border-right: solid 8px rgba(89, 0, 92, 0.3);
+    border-bottom: solid 5px rgba(89, 0, 92, 0.3);
+    margin-top:100px ;
+    width: 350px;
+    height: 490px;
+    border-radius: 20px;
+    color: white;
+    font-family: GeorgeCafe;
+    font-size: 15px;
+}
+
+.boxlogin form label{
+    font-family: "SunnySpells";
+    font-size: 23px;
+    color: rgba(89, 0, 92, 0.6);
+    padding: 15px 40px;
+    margin-bottom: -10px;
+}
+
+.inpt{
+    font-family: "GeorgeCafe"; 
+    font-size: 17px;
+    padding: 10px;
+    width: 270px;
+    height: 35px;
+    border-style: none;
+    border-radius: 20px;
+    margin-inline: 30px;
+    box-shadow: rgba(89, 0, 92, 0.3) 1px 3px;
+}
+
+.form_txt{
+    position: absolute;
+    font-family: "SunnySpells";
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+    margin-inline: 30px;
+    padding: 10px;
+}
+
+.submit_btn{
+    background: url("./granulado.jpg");
+    background-size: 100px;
+    border-radius: 20px;
+    border: 2px solid white;
+    color: white;
+    font-family: "SunnySpells";
+    font-size: 25px;
+    width: 140px;
+    height: 40px;
+    margin-inline: 95px;
+    margin-top: 25px;
+}
+
+.submit_btn:hover{
+    opacity: 0.8;
+}
+
+
+
+
+
+
