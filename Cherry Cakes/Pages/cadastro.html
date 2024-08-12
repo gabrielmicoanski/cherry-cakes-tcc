@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Styles/login.css">
+    <link rel="stylesheet" href="../Styles/cadastro.css">
     <link rel="shortcut icon" href="../Images/CherryCakes(cereja).png" type="image/x-icon">
-    <title>Cherry Cakes - Login</title>
+    <title>Cherry Cakes - Cadastro</title>
 </head>
 
 <body>
@@ -31,21 +31,23 @@
             <div class="login_area">
                 <div class="boxlogin">
                     <div class="header_form">
-                        <p class="form_txt">FAZER LOGiN</p>
+                        <p class="form_txt">FAçA O CADASTRO RAPiDiNHO</p>
                         <img src="../Images/chocolate.png" width="350px">
                     </div>
                     
                     <form action="../index.html">
+                        <label for="name">NOME:</label>
+                        <input id="username" class="inpt" type="text" placeholder="Digite seu Nome" name="name" maxlength="50" required>
                         <label for="email">EMAIL:</label>
                         <input id="mail" class="inpt" type="email" placeholder="Digite seu Email" name="email" maxlength="50" required>
                         <label for="senha">SENHA:</label>
                         <input id="password" class="inpt" type="password" placeholder="Digite sua Senha" name="senha" maxlength="10" required>
-                        <input type="submit" class="submit_btn" value="LOGiN" id="submit_btn">
+                        <input type="submit" class="submit_btn" value="CADASTRAR" id="submit_btn">
                         <script src="script.js"></script>
                     </form>
                 </div>
                 <div class="info_area">
-                    <p class="info_area_txt1">Não tem uma conta? <a href="./cadastro.html">Cadastrar-se</a></p>
+                    <p class="info_area_txt1">Já tem uma conta? <a href="./login.html">Login</a></p>
                     <button class="btn_entrar_google">
                         <p class="info_area_txt2">Entrar com Google</p>
                         <img src="../Images/icon_google.png" width="30px" height="30px">
