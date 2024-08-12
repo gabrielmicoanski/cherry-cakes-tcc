@@ -15,6 +15,7 @@ header{
     height: 60px;
     display: flex;
     justify-content: space-between;
+    z-index: 1;
 }
 
 /*==============IMAGENS================*/
@@ -61,8 +62,6 @@ header img{
 }
 
 .links{
-    height: 60px;
-    padding-top: 2px;
     font-family: SunnySpells;
     font-size: 25px;
     padding-inline: 10px;
@@ -110,7 +109,7 @@ header img{
     background-color: rgba(128, 128, 128, 0.507);
     border-radius: 15px;
     margin-inline: 30px;
-    
+    z-index: 0;
 }
 .info-box{
     display: flex;
@@ -156,6 +155,7 @@ p{
     font-weight: 500;
     padding-top: 40px;
     padding-bottom: 10px;
+    user-select: none;
 }
 
 
@@ -174,4 +174,9 @@ p{
 }
 .icon-menu:hover{
     opacity: 0.5;
+}
+
+.box:hover{
+    opacity: 0.8;
+    cursor: pointer;
 }
