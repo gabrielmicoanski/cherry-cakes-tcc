@@ -8,6 +8,10 @@
     padding: 0;
 }
 
+html{
+    height: 100%;
+}
+
 header{
     position: fixed;
     background-color: rgb(255, 0, 157);
@@ -74,41 +78,63 @@ header img{
 }
 
 /*====================CONTENT==================*/
-.area1{
-    display: flex;
-    justify-content: space-evenly;
-    background-image: url("../Images/background-cupcakes.png");
-    border-bottom:solid rgba(255, 0, 157, 0.507) 4px ;
-    padding-inline: 150px;
-}
+    /*******Area 1*********/
+        .area1{
+            display: flex;
+            justify-content: space-evenly;
+            background-image: url("../Images/background-cupcakes.png");
+            border-bottom:solid rgba(255, 0, 157, 0.507) 4px ;
+            padding-inline: 150px;
+        }
+    /*******Area 2*********/
+        .area2{
+            background-color: rgba(255, 255, 255, 0.3);
+        }
 
-.area2{
-    background-color: rgb(238, 238, 238);
+    /*******Area 3*********/
+        .area3{
+            padding-top: 50px;
+            display: flex;
+            flex-direction:column;
+            width: 100%;
+            height: 800px;
+            border-top:solid rgba(255, 0, 157, 0.507) 4px ;
+        }
+
+        .desc-area3{
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+            margin-inline: 500px;
+        }
+        
+        .desc-box-a3{
+            display: flex;
+            justify-content:space-around;
+            gap: 60px;
+        }
+/*============CARDS==============*/
+.cards{
     display: flex;
     justify-content: center;
 }
 
-.title-area2{
-    background-color: rgb(238, 238, 238);
-    font-size: 35px;
-    font-family: GeorgeCafe;
-    text-align: center;
-    padding-top: 20px;
-}
-
-/*============CARDS==============*/
 .cards-bolos{
     display: flex;
     justify-content: space-around;
+    gap: 60px;
+}
+
+#category2{
+   margin-bottom: 100px;
 }
 
 .box{
     display: block;
     width: 250px;
     height: 300px;
-    background-color: rgba(128, 128, 128, 0.507);
+    background-color: rgba(206, 206, 206, 0.507);
     border-radius: 15px;
-    margin-inline: 30px;
     z-index: 0;
 }
 .info-box{
@@ -120,7 +146,6 @@ header img{
 }
 
 .category-area2{
-    background-color: rgb(238, 238, 238) ;
     display: flex;
     justify-content: center;
 }
@@ -150,6 +175,7 @@ p{
 }
 
 .category{
+    color:  black;
     width: 1150px;
     font-size: 30px;
     font-weight: 500;
@@ -157,6 +183,32 @@ p{
     padding-bottom: 10px;
     user-select: none;
 }
+
+.title-area2{
+    color: black;
+    font-weight: 300;
+    font-size: 40px;
+    font-family: GeorgeCafe;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.txt-a3{
+    font-size: 25px;
+    padding-top: 30px;
+    width: 500px;
+    height: 100%;
+}
+
+.title-area3{
+    color: black;
+    font-weight: 300;
+    font-size: 40px;
+    font-family: GeorgeCafe;
+    text-align: center;
+}
+
+
 
 
 /*=======HOVER=========*/
