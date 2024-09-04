@@ -1,4 +1,4 @@
-const btnOpen = document.querySelector('.btn-popup')
+const btnOpen = document.querySelector('#link1')
 const btnClose = document.querySelector('.btn-close-popup')
 const popup = document.querySelector(".login-area")
 

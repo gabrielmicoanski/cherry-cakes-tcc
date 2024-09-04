@@ -216,7 +216,7 @@ header img{
     color: var(--rosa);
     font-family: MilkPeach;
     text-align: center;
-    text-shadow: 2px 3px 1px var(--vermelho);
+    text-shadow: 2px 3px 1px var(--verde);
 }
 
 .txt-a4{
@@ -238,6 +238,7 @@ header img{
 /*=======HOVER=========*/
 #link1:hover{
     opacity: 0.5;
+    cursor: pointer;
 }
 #link2:hover{
     opacity: 0.5;
