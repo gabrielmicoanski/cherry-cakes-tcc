@@ -1,6 +1,14 @@
 /*========CONFIGS==========*/
 @import url("./fonts.css");
 
+:root{
+     --rosa-claro:rgb(255, 190, 212);
+     --rosa:rgb(255, 0, 157);
+     --vermelho:rgb(255, 86, 86);
+     --verde:rgb(125, 255, 125);
+     --branco:rgb(255, 255, 255);
+}
+
 /*============PAGE===============*/
 *{
     box-sizing: border-box;
@@ -14,7 +22,7 @@ html{
 
 header{
     position: fixed;
-    background-color: rgb(255, 0, 157);
+    background-color: var(--rosa);
     width: 100%;
     height: 60px;
     display: flex;
@@ -55,7 +63,7 @@ header img{
     height: 200px;
     margin-inline:25px;
     margin-top: 15px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 /*===========LINKS==================*/
@@ -83,16 +91,28 @@ header img{
             display: flex;
             justify-content: space-evenly;
             background-image: url("../Images/background-cupcakes.png");
-            border-bottom:solid rgba(255, 0, 157, 0.507) 4px ;
+            border-bottom:solid var(--rosa-claro) 4px ;
             padding-inline: 150px;
         }
     /*******Area 2*********/
         .area2{
-            background-color: rgba(255, 255, 255, 0.3);
+            background-color: white;
         }
 
-    /*******Area 3*********/
+    /*******Area 3********/
         .area3{
+            width: 100%;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--rosa-claro);
+            background-image: url("../Images/pattern_checkerboard_1_14_0-0_0_1__ffdbe7_ffbdd3.png");
+            border-top: 4px solid var(--verde);
+        }
+
+    /*******Area 4*********/
+        .area4{
             padding-top: 50px;
             display: flex;
             flex-direction:column;
@@ -101,14 +121,14 @@ header img{
             border-top:solid rgba(255, 0, 157, 0.507) 4px ;
         }
 
-        .desc-area3{
+        .desc-area4{
             display: flex;
             justify-content: center;
             margin-top: 100px;
             margin-inline: 500px;
         }
         
-        .desc-box-a3{
+        .desc-box-a4{
             display: flex;
             justify-content:space-around;
             gap: 60px;
@@ -122,7 +142,7 @@ header img{
 .cards-bolos{
     display: flex;
     justify-content: space-around;
-    gap: 60px;
+    gap: 20px;
 }
 
 #category2{
@@ -132,10 +152,11 @@ header img{
 .box{
     display: block;
     width: 250px;
-    height: 300px;
+    height: 370px;
     background-color: rgba(206, 206, 206, 0.507);
-    border-radius: 15px;
+    border-radius: 10px;
     z-index: 0;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .info-box{
     display: flex;
@@ -151,14 +172,10 @@ header img{
 }
 
 /*============TEXTOS===========*/
-p{
-    font-family:GeorgeCafe ;
-}
-
 .slogan{
-    font-family: Mylove ;
+    font-family:Mylove;
     font-size: 50px;
-    margin-top: 150px;
+    margin-top: 180px;
 }
 
 .info-box #name{
@@ -176,9 +193,10 @@ p{
 
 .category{
     color:  black;
-    width: 1150px;
+    width: 1020px;
+    font-family: GeorgeCafe;
     font-size: 30px;
-    font-weight: 500;
+    font-weight: 500px;
     padding-top: 40px;
     padding-bottom: 10px;
     user-select: none;
@@ -193,22 +211,28 @@ p{
     padding-top: 20px;
 }
 
-.txt-a3{
+.title-news{
+    font-size: 80px;
+    color: var(--rosa);
+    font-family: MilkPeach;
+    text-align: center;
+    text-shadow: 2px 3px 1px var(--vermelho);
+}
+
+.txt-a4{
     font-size: 25px;
     padding-top: 30px;
     width: 500px;
     height: 100%;
 }
 
-.title-area3{
+.title-area4{
     color: black;
     font-weight: 300;
     font-size: 40px;
     font-family: GeorgeCafe;
     text-align: center;
 }
-
-
 
 
 /*=======HOVER=========*/

@@ -1,0 +1,145 @@
+/*========CONFIGS==========*/
+@import url("./fonts.css");
+
+/*============PAGE===============*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+}
+
+header{
+    position: fixed;
+    background-color: rgb(255, 0, 157);
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+/*================CONTENT====================*/
+.area{
+    padding-top:60px ;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+    /*********SEARCH BAR*********/
+        .search-bar-area{
+            display: flex;
+            justify-content: center;
+            width: 1000px;
+            height: 45px;
+        }
+
+        .search-bar input{
+            width: 800px;
+            height: 40px;
+            border-radius: 50px;
+            border:1px rgb(255, 0, 157) solid;
+            padding: 0px 0px 0px 20px;
+            font-family: GeorgeCafe;
+            font-size: 17px;
+        }
+
+        .search-bar button{
+            background-color:  rgb(255, 0, 157);
+            width: 100px;
+            height: 40px;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+            font-family: GeorgeCafe;
+            font-size: 20px;
+        }
+    /****************************/
+
+
+
+
+
+
+
+
+
+
+
+
+/*===========LINKS==================*/
+.links-area{
+    display: flex;
+    height: 60px;
+    padding:15px 10px;
+}
+
+.links{
+    display: flex;
+    font-family: SunnySpells;
+    font-size: 25px;
+    padding-inline: 10px;
+    color: white;
+    text-decoration-line: none;
+}
+
+#link4{
+    padding-right: 20px;
+}
+
+/*==============IMAGENS================*/
+header img{
+    width: 60px;
+    height: 60px;
+}
+
+.icon-menu{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.icon-perfil{
+    width: 30px;
+    height:30px;
+    margin-right: 20px;
+}
+
+/*============TEXTOS===========*/
+p{
+    font-family:GeorgeCafe ;
+}
+
+.title-area{
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.title{
+    font-family:GeorgeCafe;
+    font-size: 40px;
+}
+/*=======HOVER=========*/
+#link1:hover{
+    opacity: 0.5;
+}
+#link2:hover{
+    opacity: 0.5;
+}
+#link3:hover{
+    opacity: 0.5;
+}
+#link4:hover{
+    opacity: 0.5;
+}
+.icon-menu:hover{
+    opacity: 0.5;
+}

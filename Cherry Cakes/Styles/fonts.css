@@ -14,6 +14,11 @@
 }
 
 @font-face{
-    font-family: Aprilliya;
-    src:url("../Fonts/Aprilliya.ttf")
+    font-family: Saturday;
+    src:url("../Fonts/Saturday\ Sweat.otf")
+}
+
+@font-face {
+    font-family: MilkPeach;
+    src: url("../Fonts/Milk\ Peach.ttf");
 }

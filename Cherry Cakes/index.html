@@ -5,18 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Styles/style.css">
     <link rel="stylesheet" href="./Styles/fonts.css">
+    <link rel="stylesheet" href="./Styles/form.css">
     <link rel="shortcut icon" href="./Images/CherryCakes(cereja).png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <title>Cherry Cakes</title>
 </head>
 
 <body>
+    <!--==========================FORM=============================-->
+
+    <div class="login-area">
+        <div class="box-login-container">
+            <div class="box-login-content">
+
+                <div class="box-left">
+                    <div class="boxlogin">
+                        <div class="header_form">
+                            <p class="form_txt">FAZER LOGiN</p>
+                            <img class="chocolate-form" src="./Images/chocolate.png">
+                        </div>
+                        
+                        <form action="../index.html">
+                            <div class="input">
+                                <img src="./Images/icon-mail-black.png" alt="">
+                                <input id="mail" type="email" placeholder="EMAIL" name="email" maxlength="50" required>
+                            </div>
+                            <div class="input">
+                                <img src="./Images/icon-lock-black.png" alt="">
+                                <input id="password" type="password" placeholder="SENHA" name="senha" maxlength="10" required>
+                                <i id="btn-eye" class="bi bi-eye" onclick="btnEye()"></i>
+                            </div>
+                            <input type="submit" class="submit_btn" value="LOGiN" id="submit_btn">
+                        </form>
+                    </div>
+                    <div class="info_area">
+                        <p class="info_area_txt1">Não tem uma conta? <a href="./cadastro.html">Cadastrar-se</a></p>
+                        <button class="btn_entrar_google">
+                            <p class="btn-google-txt">Entrar com Google</p>
+                            <img src="./Images/icon_google.png" width="30px" height="30px">
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="box-right">
+                    <img class="btn-close-popup" src="./Images/icon-close.png" alt="">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--===========================================================-->
+
+
+
+
     <header>
         <a href="./index.html"><img src="./Images/CherryCakes(cereja)[vetor].png"></a>
         <section class="links-area">
             <div class="links">
                 <a href="./Pages/login.html" class="links" id="link2">LOGiN</a>
-                <a href=".desc-area3" class="links" id="link3">CARDAPiO</a>
+                <a href="./Pages/cardapio.html" class="links" id="link3">CARDAPiO</a>
                 <a href="" class="links" id="link4">CONTATO</a>
             </div> 
             <div class="perfil">
@@ -28,8 +78,8 @@
         </section>
     </header>
 
-<!--=====================AREA 1===================-->
     <main>
+        <!--=====================AREA 1===================-->
         <section class="area1">
             <div class="left-area">
                 <img class="logo" src="./Images/CherryCakes(logo).png" alt="">
@@ -41,7 +91,7 @@
             </div>
         </section>
 
-<!--=====================AREA 2=====================-->
+        <!--=====================AREA 2=====================-->
         <section class="area2">
             <section class="title-area2">
                 <div>
@@ -63,6 +113,7 @@
                             <div class="info-box">
                                 <span id="name">Bolo de Chocolate</span>
                                 <span id="desc">Recheio de chocolate, creme de chocolate e cobertura de chocolate</span>
+                                <button class="btn-popup" id="popup1">Ver</button>
                             </div>
                         </div>
     
@@ -73,6 +124,7 @@
                             <div class='info-box'>
                                 <span id="name">Bolo de Morango</span>
                                 <span id="desc">Recheio de morango e cobertura de chocolate branco</span>
+                                <button class="btn-popup" id="popup2">Ver</button>
                             </div>
                         </div>
     
@@ -83,6 +135,7 @@
                             <div class="info-box">
                                 <span id="name">Bolo de Abacaxi</span>
                                 <span id="desc">Recheio de abacaxi e cobertura de creme</span>
+                                <button class="btn-popup" id="popup3">Ver</button>
                             </div>
                         </div>
     
@@ -93,6 +146,7 @@
                             <div class="info-box">
                                 <span id="name">Bolo de Red Velvet</span>
                                 <span id="desc">Recheio de butter cream e cobertura de chocolate branco</span>
+                                <button class="btn-popup" id="popup4">Ver</button>
                             </div>
                             </div>
                         </div>
@@ -151,25 +205,27 @@
                     </div>
             </section>
         </section>
-
+        
         <section class="area3">
-            <section class="title-area3">
-                <div>
-                    <p class="title2">QUEM NÓS SOMOS</p>
-                </div>
-            </section>
-            <section class="desc-area3">
-                <div class="desc-box-a3">
-                    <div class="txt-a3">
-                        <p>Somos uma loja de bolos e doces apaixonada por criar momentos doces e especiais para você. Cada bolo que fazemos é pensado com carinho e atenção aos detalhes, desde a seleção dos ingredientes frescos até a decoração final. Aqui na Cherry Cakes, acreditamos que cada sobremesa conta uma história, e estamos dedicados a tornar cada pedaço uma experiência deliciosa e memorável. Se você busca um bolo para uma ocasião especial ou um doce para alegrar o dia, estamos aqui para adoçar sua vida com muito amor e sabor!</p>
-                    </div>
-                    <div class="cheesecake">
-                        <img src="./Images/cheesecake.png" alt="">
-                    </div>
-                </div>
-            </section>
-        </section>
+            <div class="news-area">
+                <div class="news">
+                    <div class="info-news">
+                        <div class="title-news">
+                            <p>Novo Lançamento</p>
+                        </div>
+                        <div class="txt-news">
 
+                        </div>
+                    </div>
+                    <div class="img-news">
+                        <img src="./Images/cherry coffee.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+    <script src="./Scripts/password-eye.js"></script>
+    <script src="./Scripts/popup.js"></script>
+
 </body>
 </html>
