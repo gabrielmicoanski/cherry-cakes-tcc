@@ -20,6 +20,8 @@ html{
     height: 100%;
 }
 
+
+/*=================HEADER=================*/
 header{
     position: fixed;
     background-color: var(--rosa);
@@ -30,7 +32,6 @@ header{
     z-index: 1;
 }
 
-/*==============IMAGENS================*/
 header img{
     width: 60px;
     height: 60px;
@@ -42,65 +43,146 @@ header img{
     margin-right: 10px;
 }
 
-.logo{
-    width: 400px;
-    height: 400px;
-}
-
-.cheesecake{
-    width: 400px;
-    height: 400px;
-}
-
 .icon-perfil{
     width: 30px;
     height:30px;
     margin-right: 20px;
 }
 
-.image-box img{
-    width: 200px;
-    height: 200px;
-    margin-inline:25px;
-    margin-top: 15px;
-    border-radius: 5px;
-}
 
-/*===========LINKS==================*/
-.links-area{
-    display: flex;
-    height: 60px;
-    padding:15px 10px;
-}
+    /*links*/
+    .links-area{
+        display: flex;
+        height: 60px;
+        padding:15px 10px;
+    }
 
-.links{
-    font-family: SunnySpells;
-    font-size: 25px;
-    padding-inline: 10px;
-    color: white;
-    text-decoration-line: none;
-}
+    .links{
+        font-family: SunnySpells;
+        font-size: 25px;
+        padding-inline: 10px;
+        color: var(--branco);
+        text-decoration-line: none;
+    }
 
-#link4{
-    padding-right: 20px;
-}
+    #link4{
+        padding-right: 20px;
+    }
 
 /*====================CONTENT==================*/
-    /*******Area 1*********/
-        .area1{
+
+
+    /*LOGO AREA*/
+        .logo-area{
             display: flex;
             justify-content: space-evenly;
             background-image: url("../Images/background-cupcakes.png");
             border-bottom:solid var(--rosa-claro) 4px ;
             padding-inline: 150px;
         }
-    /*******Area 2*********/
-        .area2{
-            background-color: white;
+
+        .slogan{
+            font-family:Mylove;
+            font-size: 50px;
+            margin-top: 180px;
         }
 
-    /*******Area 3********/
-        .area3{
+        .logo{
+            width: 400px;
+            height: 400px;
+        }
+
+
+    /*OFFSALE AREA*/
+        .offsale-area{
+            background-color: white;
+            scroll-snap-align: start;
+        }
+
+        .offsale-title-area{
+            color: black;
+            font-weight: 300;
+            font-size: 40px;
+            font-family: GeorgeCafe;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        .cards{
+            display: flex;
+            justify-content: center;
+        }
+        
+        .cards-bolos{
+            display: flex;
+            justify-content: space-around;
+            gap: 25px;
+        }
+        
+        .cards-category-area{
+            display: flex;
+            justify-content: center;
+        }
+
+        .category{
+            color:  black;
+            width: 1020px;
+            font-family: GeorgeCafe;
+            font-size: 30px;
+            font-weight: 500px;
+            padding-top: 40px;
+            padding-bottom: 10px;
+            user-select: none;
+        }
+
+        #category2{
+            margin-bottom: 100px;
+         }
+        
+        .box{
+            display: block;
+            width: 250px;
+            height: 370px;
+            background-color: rgba(206, 206, 206, 0.507);
+            border-radius: 10px;
+            z-index: 0;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+
+        .image-box img{
+            width: 200px;
+            height: 200px;
+            margin-inline:25px;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+
+        .info-box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top:0.6rem;
+        }
+
+        .info-box #name{
+            font-family: GeorgeCafe;
+            font-weight: 800;
+            font-size: 25px;
+        }
+        
+        .info-box #desc{
+            font-family: GeorgeCafe;
+            font-size: 15px;
+            font-weight: 500;
+            text-align: center;
+        }
+        
+        
+        
+
+    /*NEWS AREA*/
+        .news-area{
             width: 100%;
             height: 500px;
             display: flex;
@@ -109,133 +191,35 @@ header img{
             background-color: var(--rosa-claro);
             background-image: url("../Images/pattern_checkerboard_1_14_0-0_0_1__ffdbe7_ffbdd3.png");
             border-top: 4px solid var(--verde);
+            scroll-snap-align: start;
         }
 
-    /*******Area 4*********/
-        .area4{
-            padding-top: 50px;
+        .info-news{
             display: flex;
-            flex-direction:column;
-            width: 100%;
-            height: 800px;
-            border-top:solid rgba(255, 0, 157, 0.507) 4px ;
         }
 
-        .desc-area4{
-            display: flex;
-            justify-content: center;
-            margin-top: 100px;
-            margin-inline: 500px;
+        .title-news{
+            font-size: 80px;
+            color: var(--rosa);
+            font-family: MilkPeach;
+            text-align: center;
+            text-shadow: 2px 3px 1px var(--verde);
         }
-        
-        .desc-box-a4{
-            display: flex;
-            justify-content:space-around;
-            gap: 60px;
-        }
-/*============CARDS==============*/
-.cards{
-    display: flex;
-    justify-content: center;
-}
-
-.cards-bolos{
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-#category2{
-   margin-bottom: 100px;
-}
-
-.box{
-    display: block;
-    width: 250px;
-    height: 370px;
-    background-color: rgba(206, 206, 206, 0.507);
-    border-radius: 10px;
-    z-index: 0;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-.info-box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top:0.6rem;
-}
-
-.category-area2{
-    display: flex;
-    justify-content: center;
-}
-
-/*============TEXTOS===========*/
-.slogan{
-    font-family:Mylove;
-    font-size: 50px;
-    margin-top: 180px;
-}
-
-.info-box #name{
-    font-family: GeorgeCafe;
-    font-weight: 800;
-    font-size: 25px;
-}
-
-.info-box #desc{
-    font-family: GeorgeCafe;
-    font-size: 15px;
-    font-weight: 500;
-    text-align: center;
-}
-
-.category{
-    color:  black;
-    width: 1020px;
-    font-family: GeorgeCafe;
-    font-size: 30px;
-    font-weight: 500px;
-    padding-top: 40px;
-    padding-bottom: 10px;
-    user-select: none;
-}
-
-.title-area2{
-    color: black;
-    font-weight: 300;
-    font-size: 40px;
-    font-family: GeorgeCafe;
-    text-align: center;
-    padding-top: 20px;
-}
-
-.title-news{
-    font-size: 80px;
-    color: var(--rosa);
-    font-family: MilkPeach;
-    text-align: center;
-    text-shadow: 2px 3px 1px var(--verde);
-}
-
-.txt-a4{
-    font-size: 25px;
-    padding-top: 30px;
-    width: 500px;
-    height: 100%;
-}
-
-.title-area4{
-    color: black;
-    font-weight: 300;
-    font-size: 40px;
-    font-family: GeorgeCafe;
-    text-align: center;
-}
 
 
-/*=======HOVER=========*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*=======HOVER & EFFECTS=========*/
 #link1:hover{
     opacity: 0.5;
     cursor: pointer;
