@@ -1,10 +1,8 @@
-# Cherry Cakes 🍒
+<img src="./Cherry Cakes/Images/logo.png">
+<h1 align="center">🍒Cherry Cakes🍒</h1>
+<h2 align="center">Projeto WebSite de Confeitaria com cardápio online e serviço de entregas</h2>
 
-Projeto WebSite de Confeitaria com cardápio online e serviço de entregas
 
-
-![Logo]("./Cherry Cakes/Images/logo.png")
-
-### Desenvolvedores
+## Desenvolvedores
 - [@gabrielmicoanski](https://github.com/gabrielmicoanski)
 - [@thiagoscharf](https://github.com/TzkScharf)
