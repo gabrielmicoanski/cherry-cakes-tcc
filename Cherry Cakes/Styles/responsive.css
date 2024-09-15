@@ -1,0 +1,198 @@
+/* Mobile (menores que 600px) */
+@media only screen and (max-width: 600px) {
+    /* Header */
+    header {
+        height: 50px;
+    }
+
+    header img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .icon-menu, .icon-perfil {
+        width: 25px;
+        height: 25px;
+    }
+
+    .links-area {
+        display: none; /* Esconde os links no mobile */
+    }
+
+    /* Logo area */
+    .logo-area {
+        flex-direction: column;
+        padding-inline: 20px;
+    }
+
+    .slogan {
+        font-size: 30px;
+        margin-top: 10px;
+    }
+
+    .logo {
+        width: 200px;
+        height: 200px;
+    }
+
+    /* Cards */
+    .cards-bolos {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .box {
+        width: 90%;
+        height: auto;
+    }
+
+    .image-box img {
+        width: 100%;
+        height: auto;
+    }
+
+    .info-box #name {
+        font-size: 20px;
+    }
+
+    .info-box #desc {
+        font-size: 14px;
+    }
+
+    /* Form */
+    .login-area {
+        padding: 20px;
+    }
+
+    .box-login-container {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .box-left, .box-right {
+        width: 100%;
+    }
+}
+
+/* Tablets (601px - 768px) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    header {
+        height: 55px;
+    }
+
+    header img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .icon-menu, .icon-perfil {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Logo area */
+    .logo-area {
+        padding-inline: 50px;
+    }
+
+    .slogan {
+        font-size: 40px;
+    }
+
+    .logo {
+        width: 300px;
+        height: 300px;
+    }
+
+    /* Cards */
+    .cards-bolos {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .box {
+        width: 45%;
+        height: auto;
+    }
+
+    .image-box img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Form */
+    .login-area {
+        padding: 30px;
+    }
+
+    .box-login-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .box-left, .box-right {
+        width: 100%;
+    }
+}
+
+/* Desktop e telas maiores (768px+) */
+@media only screen and (min-width: 769px) {
+    header {
+        height: 60px;
+    }
+
+    header img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .icon-menu, .icon-perfil {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Logo area */
+    .logo-area {
+        padding-inline: 150px;
+    }
+
+    .slogan {
+        font-size: 50px;
+    }
+
+    .logo {
+        width: 400px;
+        height: 400px;
+    }
+
+    /* Cards */
+    .cards-bolos {
+        display: flex;
+        justify-content: space-around;
+        gap: 25px;
+    }
+
+    .box {
+        width: 250px;
+        height: 370px;
+    }
+
+    .image-box img {
+        width: 200px;
+        height: 200px;
+        margin-inline: 25px;
+        margin-top: 15px;
+    }
+
+    /* Form */
+    .login-area {
+        padding: 50px;
+    }
+
+    .box-login-container {
+        width: 60%;
+        padding: 30px;
+    }
+}

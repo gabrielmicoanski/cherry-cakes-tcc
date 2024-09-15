@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,11 +29,11 @@
                         <form action="../index.html">
                             <div class="input">
                                 <img src="./Images/icon-mail-black.png" alt="">
-                                <input id="mail" type="email" placeholder="EMAIL" name="email" maxlength="50" required>
+                                <input id="mail" type="email" placeholder="Email" name="email" maxlength="50" required>
                             </div>
                             <div class="input">
                                 <img src="./Images/icon-lock-black.png" alt="">
-                                <input id="password" type="password" placeholder="SENHA" name="senha" maxlength="10" required>
+                                <input id="password" type="password" placeholder="Senha" name="senha" maxlength="16" required>
                                 <i id="btn-eye" class="bi bi-eye" onclick="btnEye()"></i>
                             </div>
                             <input type="submit" class="submit_btn" value="LOGiN" id="submit_btn">
@@ -101,11 +101,19 @@
 
             <!--CARDS LINE 1-->
             <section class="cards-category-area">
-                <div>
-                    <p class="category" id="category1">Bolos</p>
+                <div class="category-area">
+                    <div class="categories">
+                        <div>
+                            <p class="category" id="category1" onclick="changeCategory('bolos')">Bolos</p>
+                        </div>
+                        <div></div>
+                            <p class="category" id="category2" onclick="changeCategory('doces')">Doces</p>
+                        </div>
+                    </div>
+                   
                 </div>
             </section>
-            <section class="cards">
+            <section class="cards" id="cards-line1">
                     <div class="cards-bolos">
                         <div class="box" id="box1">
                             <div class="image-box">
@@ -152,13 +160,8 @@
     
     
             <!--CARDS LINE 2-->
-            <section class="cards-category-area">
-                <div>
-                    <p class="category">Doces</p>
-                </div>
-            </section>
-            <section class="cards">
-                    <div class="cards-bolos" id="category2">
+            <section class="cards" id="cards-line2">
+                    <div class="cards-bolos" id="cards-category2">
                         <div class="box" id="box1">
                             <div class="image-box">
                                 <img src="./Images/candy-cherrypie.jpg" alt="">
@@ -222,6 +225,7 @@
     </main>
     <script src="./Scripts/password-eye.js"></script>
     <script src="./Scripts/popup.js"></script>
+    <script src="./Scripts/category-offsale.js"></script>
 
 </body>
 </html>

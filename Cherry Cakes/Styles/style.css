@@ -18,6 +18,7 @@
 
 html{
     height: 100%;
+    scroll-snap-type: y proximity;
 }
 
 
@@ -30,43 +31,42 @@ header{
     display: flex;
     justify-content: space-between;
     z-index: 1;
-}
 
-header img{
-    width: 60px;
-    height: 60px;
-}
+    & img{
+        width: 60px;
+        height: 60px;
+    }
 
-.icon-menu{
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-}
+    & .icon-menu{
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
 
-.icon-perfil{
-    width: 30px;
-    height:30px;
-    margin-right: 20px;
+    & .icon-perfil{
+        width: 30px;
+        height:30px;
+        margin-right: 20px;
+    }
 }
-
 
     /*links*/
     .links-area{
         display: flex;
         height: 60px;
         padding:15px 10px;
-    }
 
-    .links{
-        font-family: SunnySpells;
-        font-size: 25px;
-        padding-inline: 10px;
-        color: var(--branco);
-        text-decoration-line: none;
-    }
+        & .links{
+            font-family: SunnySpells;
+            font-size: 25px;
+            padding-inline: 10px;
+            color: var(--branco);
+            text-decoration-line: none;
+        }
 
-    #link4{
-        padding-right: 20px;
+        & #link4{
+            padding-right: 20px;
+        }
     }
 
 /*====================CONTENT==================*/
@@ -79,6 +79,7 @@ header img{
             background-image: url("../Images/background-cupcakes.png");
             border-bottom:solid var(--rosa-claro) 4px ;
             padding-inline: 150px;
+            scroll-snap-align: start;
         }
 
         .slogan{
@@ -95,7 +96,9 @@ header img{
 
     /*OFFSALE AREA*/
         .offsale-area{
-            background-color: white;
+            background-color: var(--branco);
+            height: 100%;
+            margin-bottom: 120px;
             scroll-snap-align: start;
         }
 
@@ -112,6 +115,14 @@ header img{
             display: flex;
             justify-content: center;
         }
+
+        #cards-line1{
+            display: show;
+        }
+
+        #cards-line2{
+            display: none;
+        }
         
         .cards-bolos{
             display: flex;
@@ -122,29 +133,43 @@ header img{
         .cards-category-area{
             display: flex;
             justify-content: center;
+            margin-bottom: 15px;
         }
 
-        .category{
-            color:  black;
-            width: 1020px;
-            font-family: GeorgeCafe;
-            font-size: 30px;
-            font-weight: 500px;
+        .category-area{
+            width: 1060px;
+            display: flex;
+        }
+
+        .categories{
             padding-top: 40px;
             padding-bottom: 10px;
             user-select: none;
+            display: flex;
+            gap: 5px;
         }
 
-        #category2{
-            margin-bottom: 100px;
-         }
+        .category{
+            color:black;
+            width: 100px;
+            height: 40px;
+            font-family: GeorgeCafe;
+            font-size: 30px;
+            font-weight: 500px;
+            text-align: center;
+            padding-top: 5px;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.5s ease;
+        }
+
+        #category1.active, #category2.active {
+            border-bottom: 2px solid var(--rosa);
+        }
         
         .box{
             display: block;
             width: 250px;
             height: 370px;
-            background-color: rgba(206, 206, 206, 0.507);
-            border-radius: 10px;
             z-index: 0;
             box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
         }
@@ -154,7 +179,6 @@ header img{
             height: 200px;
             margin-inline:25px;
             margin-top: 15px;
-            border-radius: 5px;
         }
 
         .info-box{
@@ -165,18 +189,36 @@ header img{
             margin-top:0.6rem;
         }
 
-        .info-box #name{
-            font-family: GeorgeCafe;
-            font-weight: 800;
-            font-size: 25px;
+        .info-box{
+            & #name{
+                font-family: GeorgeCafe;
+                font-weight: 800;
+                font-size: 25px;
+            }
+
+            & #desc{
+                font-family: GeorgeCafe;
+                font-size: 15px;
+                font-weight: 500;
+                text-align: center;
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         
-        .info-box #desc{
-            font-family: GeorgeCafe;
-            font-size: 15px;
-            font-weight: 500;
-            text-align: center;
+        .fade-in {
+            animation: fadeInUp 0.6s ease-in-out;
         }
+        
         
         
         
@@ -221,23 +263,19 @@ header img{
 
 /*=======HOVER & EFFECTS=========*/
 #link1:hover{
-    opacity: 0.5;
+    color:var(--rosa-claro);
     cursor: pointer;
 }
-#link2:hover{
-    opacity: 0.5;
-}
-#link3:hover{
-    opacity: 0.5;
-}
-#link4:hover{
-    opacity: 0.5;
-}
+
 .icon-menu:hover{
     opacity: 0.5;
 }
 
+.category:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
 .box:hover{
     opacity: 0.8;
-    cursor: pointer;
 }
