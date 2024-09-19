@@ -4,23 +4,23 @@ function changeCategory(category) {
     var category1 = document.querySelector("#category1");
     var category2 = document.querySelector("#category2");
 
-    // Remove a classe 'active' de ambas as categorias
+
     category1.classList.remove('active');
     category2.classList.remove('active');
 
     if (category === 'bolos') {
         line1.style.display = 'flex';
         line2.style.display = 'none';
-        category1.classList.add('active'); // Adiciona a classe 'active' para 'bolos'
+        category1.classList.add('active');
 
-        // Animação para os cards da linha 1
+
         animateCards("#cards-line1 .box");
     } else {
         line1.style.display = 'none';
         line2.style.display = 'flex';
-        category2.classList.add('active'); // Adiciona a classe 'active' para 'doces'
+        category2.classList.add('active');
 
-        // Animação para os cards da linha 2
+
         animateCards("#cards-line2 .box");
     }
 }
@@ -31,7 +31,6 @@ function animateCards(cardsSelector) {
         card.classList.add("fade-in");
     });
 
-    // Remove a animação após terminar para reiniciar na próxima troca
     setTimeout(function() {
         cards.forEach(function(card) {
             card.classList.remove("fade-in");

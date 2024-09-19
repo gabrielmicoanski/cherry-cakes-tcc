@@ -234,11 +234,21 @@ header{
             background-image: url("../Images/pattern_checkerboard_1_14_0-0_0_1__ffdbe7_ffbdd3.png");
             border-top: 4px solid var(--verde);
             scroll-snap-align: start;
+
+            & .news-area-content{
+                width: 1200px;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            & .news{
+                display: flex;
+            }
         }
 
-        .info-news{
-            display: flex;
-        }
+        
 
         .title-news{
             font-size: 80px;
