@@ -1,88 +1,112 @@
 /*==================CONFIG===============*/
 @import url("../Styles/fonts.css");
 
+:root{
+    --rosa-claro:rgb(255, 190, 212);
+    --rosa:rgb(255, 0, 157);
+    --vermelho:rgb(255, 86, 86);
+    --verde:rgb(125, 255, 125);
+    --branco:rgb(255, 255, 255);
+}
+
 /*==================CONTENT===================*/
-.login-area{
-    background-color: rgba(0, 0, 0, 0.507);
-    z-index: 1;
-    position: fixed;
-    display: none;
-    width: 100%;
-    height: 100%;
-    padding-top: 100px;
-}
+    /************SIGN-IN************/
+    .form-area{
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
 
-.box-login-container{
-    display: flex;
-    justify-content: center;
-}
+        & .form-container{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 60px;
+            width: 1300px;
+            height: 750px;
+        }
 
-.box-login-content{
-    background-color: white;
-    width: 900px;
-    height: 600px;
-    border-radius: 15px;
-    display: flex;
-}
+        & .form-content{
+            display: flex;
+            justify-content: center;
+            width: 1200px;
+            height: 650px;
+        }
 
-.box-left{
-    background-image: url("../Images/background-cupcakes.png");
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 50px 0px 50px 0px;
-}
+        & .signIn{
+            background-image: url("../Images/background-cupcakes.png");
+            background-color: var(--branco);
+            border-radius: 20px;
+            width: 100%;
+            height: 100%;
+            display:flex;
+            animation: animacao 5s;
 
-.box-right{
-    width: 80%;
-    height: 100%;
-    border-radius: 0px 15px 15px 0px;
-    background-color:var(--rosa-claro);
-    display: flex;
-    justify-content: right;
-    padding: 10px;
+            & .left-column{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                width: 60%;
+                height:100%;
+                z-index: 2;
+            }
 
-    & img{
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
+            & .right-column{
+                display: flex;
+                border-radius: 20px;
+                background-color: var(--rosa-claro);
+                width: 40%;
+                height:100%;
+                z-index: 3;
+            }
+
+            .btn-signUp{
+                width: 100px;
+                height: 50px;
+                border-radius: 50px;
+            }
+        }
+
+        & .signUp{
+            display:none;
+        }
     }
-    
-    & img:hover{
-        opacity: 0.5;
+
+    @keyframes animacao{
+
+        from{flex-direction: row;}
+        to{flex-direction: row-reverse;}
     }
-}
+
+    .content::before{
+        
+    }
+
+    .btn-close{
+        width: 100%;
+        display: flex;
+        justify-content: right;
+        padding: 10px;
+    }
+
+    .btn-close-popup{
+        background: none;
+        border: none;
+        width: 30px;
+        height: 30px;
+        font-size: 25px;
+        color:white;
+        text-align: center;
+
+    }
 
 
-
-.txtarea{
-    top: 50px;
-    left: 50px;
-    color: white;
-    position: absolute;
-    text-align: center;
-}
-.info_area_txt1{
-    font-family: GeorgeCafe;
-    font-size: 20px;
-}
-
-.btn-google-txt{
-    font-family: GeorgeCafe;
-    font-size: 15px;
-    padding:4px ;
-}
-.info_area{
-    width: 350px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 20px;
-}
-/*========================FORMULARIO=============================*/
+/*==================FORM======================*/
 .boxlogin form{
     display: flex;
     flex-direction:column;
@@ -172,7 +196,7 @@
     font-size: 25px;
     width: 140px;
     height: 40px;
-    margin-inline: 95px;
+    margin-top: 30px;
 }
 
 .form_txt{
@@ -198,16 +222,41 @@
     box-shadow: 10px 10px 28px 0px rgba(0, 0, 0, 0.4);
 }
 
+.txtarea{
+    top: 50px;
+    left: 50px;
+    color: white;
+    position: absolute;
+    text-align: center;
+}
+.info_area_txt1{
+    font-family: GeorgeCafe;
+    font-size: 20px;
+}
+
+.btn-google-txt{
+    font-family: GeorgeCafe;
+    font-size: 15px;
+    padding:4px ;
+}
+.info_area{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+
+
 /*=================HOVER===================*/
 .submit_btn:hover{
     opacity: 0.8;
 }
 .btn_entrar_google:hover{
-    opacity: 0.6;
+    transform:scale(1.01);
 }
-    
-
-
-
-
-
+   

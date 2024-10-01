@@ -14,52 +14,71 @@
 
 <body>
     <!--==========================FORM=============================-->
+        <div class="form-area">
+            <div class="form-container">
+                <div class="btn-close">
+                    <button class="btn-close-popup">X</button>
+                </div>
+                
+                <div class="form-content">
 
-    <div class="login-area">
-        <div class="box-login-container">
-            <div class="box-login-content">
 
-                <div class="box-left">
-                    <div class="boxlogin">
-                        <div class="header_form">
-                            <p class="form_txt">FAZER LOGiN</p>
-                            <img class="chocolate-form" src="./Images/chocolate.png">
+                    <!------------sign-in----------->
+                    <div class="content signIn">
+                        <div class="left-column">
+                            <div class="boxlogin">
+                                <div class="header_form">
+                                    <p class="form_txt">FAZER LOGiN</p>
+                                    <img class="chocolate-form" src="./Images/chocolate.png">
+                                </div>
+                                
+                                <form action="../index.html">
+                                    <div class="input">
+                                        <img src="./Images/icon-mail-black.png" alt="">
+                                        <input id="mail" type="email" placeholder="Email" name="email" maxlength="50" required>
+                                    </div>
+                                    <div class="input">
+                                        <img src="./Images/icon-lock-black.png" alt="">
+                                        <input id="password" type="password" placeholder="Senha" name="senha" maxlength="16" required>
+                                        <i id="btn-eye" class="bi bi-eye" onclick="btnEye()"></i>
+                                    </div>
+                                    <input type="submit" class="submit_btn" value="LOGiN" id="submit_btn">
+                                </form>
+                            </div>
+                            <div class="info_area">
+                                <button class="btn_entrar_google">
+                                    <p class="btn-google-txt">Entrar com Google</p>
+                                    <img src="./Images/icon_google.png" width="30px" height="30px">
+                                </button>
+                            </div>
                         </div>
-                        
-                        <form action="../index.html">
-                            <div class="input">
-                                <img src="./Images/icon-mail-black.png" alt="">
-                                <input id="mail" type="email" placeholder="Email" name="email" maxlength="50" required>
-                            </div>
-                            <div class="input">
-                                <img src="./Images/icon-lock-black.png" alt="">
-                                <input id="password" type="password" placeholder="Senha" name="senha" maxlength="16" required>
-                                <i id="btn-eye" class="bi bi-eye" onclick="btnEye()"></i>
-                            </div>
-                            <input type="submit" class="submit_btn" value="LOGiN" id="submit_btn">
-                        </form>
+
+                        <div class="right-column">
+                            <button class="btn-signUp" onclick="">Sign Up</button>
+                        </div>
                     </div>
-                    <div class="info_area">
-                        <p class="info_area_txt1">Não tem uma conta? <a href="./Pages/cadastro.html">Cadastrar-se</a></p>
-                        <button class="btn_entrar_google">
-                            <p class="btn-google-txt">Entrar com Google</p>
-                            <img src="./Images/icon_google.png" width="30px" height="30px">
-                        </button>
+
+
+                    <!------------sign-up----------->
+                    <div class="content signUp">
+                        <div class="left-column">
+                            
+                        </div>
+
+                        <div class="right-column">
+                            <button class="btn-signIn" onclick="">Sign In</button>
+                        </div>
                     </div>
+
+
                 </div>
-
-
-                <div class="box-right">
-                    <img class="btn-close-popup" src="./Images/icon-close.png" alt="">
-                </div>
-
             </div>
         </div>
-    </div>
-    <!--===========================================================-->
 
 
 
+
+    <!--=========================END-FORM==================================-->
 
     <header>
         <a href="./index.html"><img src="./Images/CherryCakes(cereja)[vetor].png"></a>
@@ -79,7 +98,7 @@
     </header>
 
     <main>
-        <!--======================LOGO AREA=====================-->
+        <!--======================LOGO AREA====================-->
         <section class="logo-area">
             <div class="left-logo-area">
                 <img class="logo" src="./Images/CherryCakes(logo).png" alt="">
@@ -91,7 +110,7 @@
             </div>
         </section>
 
-        <!--=====================OFFSALE AREA=====================-->
+        <!--==================OFFSALE AREA=====================-->
         <section class="offsale-area">
             <section class="offsale-title-area">
                 <div>
@@ -206,6 +225,7 @@
             </section>
         </section>
         
+        <!--=====================NEWS AREA=====================-->
         <section class="news-area">
             <div class="news-area-content">
                 <div class="news">
@@ -217,7 +237,7 @@
                         </div>
                         <div class="right-content-news">
                             <div class="img-news">
-                                <img src="./Images/cherry coffee.png" alt="">
+                                <img src="./Images/cherry-cheescake.jpg" alt="">
                             </div>
                         </div>
                     </div>

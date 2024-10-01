@@ -1,11 +1,18 @@
 const btnOpen = document.querySelector('#link1')
 const btnClose = document.querySelector('.btn-close-popup')
-const popup = document.querySelector(".login-area")
+const login = document.querySelector(".form-area")
 
 btnOpen.addEventListener('click', () => {
-    popup.style.display = 'block'
+    login.style.display = 'flex'
 })
 
 btnClose.addEventListener('click', () => {
-    popup.style.display = 'none'
+    login.style.display = 'none'
 })
+
+
+
+
+
+
+
