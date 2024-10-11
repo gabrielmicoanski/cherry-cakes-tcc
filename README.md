@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="Cherry Cakes/Images/CherryCakes(logo).png" width="250px" height="250px">
+  <img src="PROG/Cherry Cakes/Images/CherryCakes(logo).png" width="250px" height="250px">
 </div>
 
 <hr>
