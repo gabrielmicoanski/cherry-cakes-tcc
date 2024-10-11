@@ -9,6 +9,56 @@
     --branco:rgb(255, 255, 255);
 }
 
+
+/*===============ANIMATIONS=================*/
+@keyframes divisor{
+
+    0%{
+        border-radius: 0px 20px 20px 0px;
+    }
+
+    50%{
+        width: 100%; 
+        border-radius: 20px;
+    }
+
+    100%{
+        width: 40%;
+        border-radius: 0px 20px 20px 0px;
+    }
+}
+
+
+
+@keyframes slideDir{
+
+    from{
+        transform: translateX(0);
+        opacity:1;
+        z-index: 2;
+
+    }
+    to{
+        transform:translateX(360px);
+        opacity:0;     
+        z-index: 2;
+    }
+}
+
+@keyframes teste{
+
+    from{
+        transform: translateX(360px);
+        opacity:0;
+        z-index: 2;
+    }
+    to{
+        transform:translateX(0px);
+        opacity:1;
+        z-index: 2;
+    }
+}
+
 /*==================CONTENT===================*/
     /************SIGN-IN************/
     .form-area{
@@ -31,61 +81,55 @@
         }
 
         & .form-content{
+            background-image: url("../Images/background-cupcakes.png");
+            background-color: var(--branco);
+            border-radius: 20px;
             display: flex;
             justify-content: center;
             width: 1200px;
             height: 650px;
+
         }
 
         & .signIn{
-            background-image: url("../Images/background-cupcakes.png");
-            background-color: var(--branco);
-            border-radius: 20px;
+            display:flex;
             width: 100%;
             height: 100%;
-            display:flex;
-            animation: animacao 5s;
+
 
             & .left-column{
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
+                z-index: 4;
                 width: 60%;
                 height:100%;
-                z-index: 2;
             }
 
             & .right-column{
                 display: flex;
-                border-radius: 20px;
-                background-color: var(--rosa-claro);
                 width: 40%;
                 height:100%;
-                z-index: 3;
             }
 
-            .btn-signUp{
+            & .btn-signUp{
                 width: 100px;
                 height: 50px;
+                background-color: var(--verde);
                 border-radius: 50px;
             }
         }
 
         & .signUp{
-            display:none;
+            display: none;
+            width: 100%;
+            height: 100%;
         }
     }
 
-    @keyframes animacao{
 
-        from{flex-direction: row;}
-        to{flex-direction: row-reverse;}
-    }
 
-    .content::before{
-        
-    }
 
     .btn-close{
         width: 100%;
@@ -105,16 +149,35 @@
 
     }
 
+    .form-divisor{
+        width: 1200px;
+        height: 650px;
+        border-radius: 20px;
+        position: absolute;
+        z-index: 3;
+        display: flex;
+        justify-content: right;
+        
+        & .divisor{
+            background-color: var(--rosa-claro);
+            width: 40%;
+            height: 100%;
+            border-radius: 0px 20px 20px 0px;
+            animation: divisor 3s ease-in-out;
+
+        }
+    }
+
 
 /*==================FORM======================*/
-.boxlogin form{
+.boxform form{
     display: flex;
     flex-direction:column;
     align-items: center;
     gap: 35px;
 }
 
-.boxlogin{
+.boxform{
     background-color: rgba(255, 0, 123, 0.2);
     box-shadow: 10px 10px 28px 0px rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(2px);
@@ -124,6 +187,8 @@
     color: white;
     font-family: GeorgeCafe;
     font-size: 15px;
+    animation: fadeIn 1.5s;
+    animation-delay: .2s;
 }
 
 .input{
@@ -246,6 +311,8 @@
     align-items: center;
     text-align: center;
     margin-top: 20px;
+    animation: fadeIn 1.5s;
+    animation-delay: .2s;
 }
 
 

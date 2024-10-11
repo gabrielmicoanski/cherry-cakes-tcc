@@ -12,7 +12,3 @@ btnClose.addEventListener('click', () => {
 
 
 
-
-
-
-

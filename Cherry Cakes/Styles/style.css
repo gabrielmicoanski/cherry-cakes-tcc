@@ -3,7 +3,7 @@
 
 :root{
      --rosa-claro:rgb(255, 190, 212);
-     --rosa:rgb(255, 0, 157);
+     --rosaa:rgb(243, 85, 159);
      --vermelho:rgb(255, 86, 86);
      --verde:rgb(125, 255, 125);
      --branco:rgb(255, 255, 255);
@@ -25,49 +25,70 @@ html{
 /*=================HEADER=================*/
 header{
     position: fixed;
-    background-color: var(--rosa);
+    background-color: var(--rosaa);
     width: 100%;
     height: 60px;
     display: flex;
-    justify-content: space-between;
-    z-index: 5;
+    justify-content: center;
+    z-index: 2;
 
-    & img{
-        width: 60px;
-        height: 60px;
-    }
+    & .header-content{
+        width: 1000px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-    & .icon-menu{
-        width: 30px;
-        height: 30px;
-        margin-right: 10px;
-    }
+        & .menus{
+            width: 470px;
 
-    & .icon-perfil{
-        width: 30px;
-        height:30px;
-        margin-right: 20px;
+            & ul{
+                display: flex;
+                gap: 30px;
+                list-style-type: none;
+            }
+
+            & li{
+                font-size: 20px;
+                color: white;
+                font-family: GeorgeCafe;
+                font-weight: bold;
+            }
+
+            & li:hover{
+                color: var(--rosa-claro);
+                cursor: pointer;
+            }
+
+        }
+
+        & .logo{
+            width: 60px;
+            height: 60px;
+
+            & img{
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        & .shortcuts{
+            width: 470px;
+            display: flex;
+            justify-content: right;
+            gap: 25px;
+
+            & .bi{
+                color: white;
+                font-size: 28px;
+            }
+
+            & .bi:hover{
+                color: var(--rosa-claro);
+                cursor: pointer;
+            }
+        }
     }
 }
-
-    /*links*/
-    .links-area{
-        display: flex;
-        height: 60px;
-        padding:15px 10px;
-
-        & .links{
-            font-family: SunnySpells;
-            font-size: 25px;
-            padding-inline: 10px;
-            color: var(--branco);
-            text-decoration-line: none;
-        }
-
-        & #link4{
-            padding-right: 20px;
-        }
-    }
 
 /*====================CONTENT==================*/
 
@@ -76,10 +97,12 @@ header{
         .logo-area{
             display: flex;
             justify-content: space-evenly;
+            background-color: white;
             background-image: url("../Images/background-cupcakes.png");
             border-bottom:solid var(--rosa-claro) 4px ;
             padding-inline: 150px;
             scroll-snap-align: start;
+            backdrop-filter: blur(50px) ;
         }
 
         .slogan{
@@ -219,66 +242,22 @@ header{
             animation: fadeInUp 0.6s ease-in-out;
         }
         
-        
-        
-        
 
-    /*NEWS AREA*/
-        .news-area{
+    /*CREATIONS*/
+        .creations-area{
             width: 100%;
-            height: 500px;
+            height: 600px;
             display: flex;
             justify-content: center;
-            align-items: center;
-            background-color: var(--rosa-claro);
-            background-image: url("../Images/pattern_checkerboard_1_14_0-0_0_1__ffdbe7_ffbdd3.png");
-            border-top: 4px solid var(--verde);
-            scroll-snap-align: start;
+            background-image: url("../Images/cakecherrycakecherry.png");
+            background-size: cover;
 
-            & .news-area-content{
-                width: 1200px;
+            & .creations-container{
+                width: 100%;
                 height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            & .news{
-                display: flex;
+                background-color: rgba(0, 0, 0, 0.511);
             }
         }
-
-         .content-news{
-            display: flex;
-
-            & .left-content-news{
-                display: flex;
-                flex-direction: column;
-            }
-
-            & .right-content-news{
-                display: flex;
-            }
-
-        }
-
-        .img-news img{
-            width: 400px;
-            height: 400px;
-            border-radius: 400px;
-            border: 18px solid var(--rosa);
-            background-color: white;
-            box-shadow: 18px 18px 10px -1px rgba(0,0,0,0.22);
-        }
-
-        .title-news{
-            font-size: 80px;
-            color: var(--rosa);
-            font-family: MilkPeach;
-            text-align: center;
-            text-shadow: 2px 3px 1px var(--verde);
-        }
-
 
 
 

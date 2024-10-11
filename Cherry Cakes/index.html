@@ -8,93 +8,35 @@
     <link rel="stylesheet" href="./Styles/form.css">
     <link rel="shortcut icon" href="./Images/CherryCakes(cereja).png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
 
     <title>Cherry Cakes</title>
 </head>
 
 <body>
-    <!--==========================FORM=============================-->
-        <div class="form-area">
-            <div class="form-container">
-                <div class="btn-close">
-                    <button class="btn-close-popup">X</button>
-                </div>
-                
-                <div class="form-content">
-
-
-                    <!------------sign-in----------->
-                    <div class="content signIn">
-                        <div class="left-column">
-                            <div class="boxlogin">
-                                <div class="header_form">
-                                    <p class="form_txt">FAZER LOGiN</p>
-                                    <img class="chocolate-form" src="./Images/chocolate.png">
-                                </div>
-                                
-                                <form action="../index.html">
-                                    <div class="input">
-                                        <img src="./Images/icon-mail-black.png" alt="">
-                                        <input id="mail" type="email" placeholder="Email" name="email" maxlength="50" required>
-                                    </div>
-                                    <div class="input">
-                                        <img src="./Images/icon-lock-black.png" alt="">
-                                        <input id="password" type="password" placeholder="Senha" name="senha" maxlength="16" required>
-                                        <i id="btn-eye" class="bi bi-eye" onclick="btnEye()"></i>
-                                    </div>
-                                    <input type="submit" class="submit_btn" value="LOGiN" id="submit_btn">
-                                </form>
-                            </div>
-                            <div class="info_area">
-                                <button class="btn_entrar_google">
-                                    <p class="btn-google-txt">Entrar com Google</p>
-                                    <img src="./Images/icon_google.png" width="30px" height="30px">
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="right-column">
-                            <button class="btn-signUp" onclick="">Sign Up</button>
-                        </div>
-                    </div>
-
-
-                    <!------------sign-up----------->
-                    <div class="content signUp">
-                        <div class="left-column">
-                            
-                        </div>
-
-                        <div class="right-column">
-                            <button class="btn-signIn" onclick="">Sign In</button>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
-
-
-
-
-    <!--=========================END-FORM==================================-->
-
     <header>
-        <a href="./index.html"><img src="./Images/CherryCakes(cereja)[vetor].png"></a>
-        <section class="links-area">
-            <div class="links">
-                <a class="links" id="link1">LOGiN</a>
-                <a href="./Pages/cardapio.html" class="links" id="link3">CARDAPiO</a>
-                <a href="" class="links" id="link4">CONTATO</a>
-            </div> 
-            <div class="perfil">
-                <img class="icon-perfil" src="./Images/icon-perfil.png">
+        <div class="header-content">
+            <div class="menus">
+                <ul class="links">
+                    <li><a href=""></a>Vitrine</li>
+                    <li><a href=""></a>Sobre</li>
+                    <li><a href=""></a>Contato</li>
+                </ul>
             </div>
-            <div>
-                <a href=""><img src="./Images/icon-menu.png" class="icon-menu"></a>
+            <div class="logo">
+                <img src="./Images/CherryCakes(cereja)[vetor].png">
             </div>
-        </section>
+            <div class="shortcuts">
+                <div class="shorticon" id="icon1">
+                    <i class="bi bi-shop"></i>
+                </div>
+                <div class="shorticon" id="icon2">
+
+                    <i class="bi bi-person-circle"></i>
+                </div>
+            </div>
+            
+        </div>
     </header>
 
     <main>
@@ -225,24 +167,23 @@
             </section>
         </section>
         
-        <!--=====================NEWS AREA=====================-->
-        <section class="news-area">
-            <div class="news-area-content">
-                <div class="news">
-                    <div class="content-news">
-                        <div class="left-content-news">
-                            <div class="title-news">
-                                <p>Novo Lançamento</p>
-                            </div> 
-                        </div>
-                        <div class="right-content-news">
-                            <div class="img-news">
-                                <img src="./Images/cherry-cheescake.jpg" alt="">
-                            </div>
-                        </div>
+        <!--=====================CREATIONS AREA=====================-->
+        <section class="creations-area">
+            <div class="creations-container">
+                <div class="creations-content">
+                    <div class="title-container">
+
                     </div>
-                    
+                    <div class="btn-container">
+                        <i class="bi bi-chevron-double-right"></i>
+                        <button class="btnCreations">VER MAIS</button>
+                        <i class="bi bi-chevron-double-left"></i>
+                    </div>
+                    <div class="link-container">
+                        <p>Quer saber mais sobre nós?<a href="">Clique Aqui!</a></p>
+                    </div>
                 </div>
+
             </div>
         </section>
     </main>
@@ -251,4 +192,11 @@
     <script src="./Scripts/category-offsale.js"></script>
 
 </body>
+
+
+
+
+
+
+
 </html>

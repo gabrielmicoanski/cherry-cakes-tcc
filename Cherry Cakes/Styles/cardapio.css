@@ -1,6 +1,14 @@
 /*========CONFIGS==========*/
 @import url("./fonts.css");
 
+:root{
+     --rosa-claro:rgb(255, 190, 212);
+     --rosa:rgb(255, 0, 157);
+     --vermelho:rgb(255, 86, 86);
+     --verde:rgb(125, 255, 125);
+     --branco:rgb(255, 255, 255);
+}
+
 /*============PAGE===============*/
 *{
     box-sizing: border-box;
@@ -11,135 +19,160 @@
 html{
     height: 100%;
 }
-
+/*=================HEADER=================*/
 header{
     position: fixed;
-    background-color: rgb(255, 0, 157);
+    background-color: var(--rosaa);
     width: 100%;
     height: 60px;
     display: flex;
-    justify-content: space-between;
-    z-index: 1;
+    justify-content: center;
+    z-index: 2;
+
+    & .header-content{
+        width: 1000px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & .menus{
+            width: 470px;
+
+            & ul{
+                display: flex;
+                gap: 30px;
+                list-style-type: none;
+            }
+
+            & li{
+                font-size: 20px;
+                color: white;
+                font-family: GeorgeCafe;
+                font-weight: bold;
+            }
+
+        }
+
+        & .logo{
+            width: 60px;
+            height: 60px;
+
+            & img{
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        & .shortcuts{
+            width: 470px;
+            display: flex;
+            justify-content: right;
+            gap: 25px;
+
+            & .bi{
+                color: white;
+                font-size: 28px;
+            }
+        }
+    }
 }
 
 /*================CONTENT====================*/
-.area{
-    padding-top:60px ;
+.container-area{
     width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-    /*********SEARCH BAR*********/
-        .search-bar-area{
-            display: flex;
-            justify-content: center;
-            width: 1000px;
-            height: 45px;
-        }
-
-        .search-bar input{
-            width: 800px;
-            height: 40px;
-            border-radius: 50px;
-            border:1px rgb(255, 0, 157) solid;
-            padding: 0px 0px 0px 20px;
-            font-family: GeorgeCafe;
-            font-size: 17px;
-        }
-
-        .search-bar button{
-            background-color:  rgb(255, 0, 157);
-            width: 100px;
-            height: 40px;
-            border-radius: 20px;
-            text-align: center;
-            color: white;
-            font-family: GeorgeCafe;
-            font-size: 20px;
-        }
-    /****************************/
-
-
-
-
-
-
-
-
-
-
-
-
-/*===========LINKS==================*/
-.links-area{
-    display: flex;
-    height: 60px;
-    padding:15px 10px;
-}
-
-.links{
-    display: flex;
-    font-family: SunnySpells;
-    font-size: 25px;
-    padding-inline: 10px;
-    color: white;
-    text-decoration-line: none;
-}
-
-#link4{
-    padding-right: 20px;
-}
-
-/*==============IMAGENS================*/
-header img{
-    width: 60px;
-    height: 60px;
-}
-
-.icon-menu{
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-}
-
-.icon-perfil{
-    width: 30px;
-    height:30px;
-    margin-right: 20px;
-}
-
-/*============TEXTOS===========*/
-p{
-    font-family:GeorgeCafe ;
-}
-
-.title-area{
-    width: 100px;
-    height: 50px;
+    height: 100%;
     display: flex;
     justify-content: center;
 }
 
-.title{
-    font-family:GeorgeCafe;
-    font-size: 40px;
+.content-area{
+    justify-content: center;
+    display: flex;
+    flex-direction:column;
+    background-color: rgba(216, 216, 216, 0.178);
+    gap: 50px;
+    width: 1200px;
+    height: 100%;
+
+    & .first-area{
+        display: flex;
+        justify-content: center;
+        background-color: rgba(0, 128, 0, 0.178);
+        width: 100%;
+        height: 200px;
+    }
+    
+    & .second-area{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 500px;
+        background-color: rgba(0, 0, 255, 0.212);
+
+        & .products-area{
+            width: 100%;
+            height: 100%;
+
+            & .products{
+                width: 1200px;
+                height: 100%;
+                gap: 20px;
+                justify-content: center;
+                display: flex;
+                flex-wrap: wrap;
+
+                & .box{
+                    width: 550px;
+                    height: 200px;
+                    background-color: white;
+                    display: flex;
+
+                    & img{
+                        width: 200px;
+                        height: 200px;
+                    }
+
+                    & .box-l-container{
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    & .box-r-container{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding: 20px;
+                        gap: 50px;
+
+                        & .btn-container{
+                            width: 100%;
+                            display: flex;
+                            justify-content: right;
+                        }
+
+                        & .btnBuy{
+                            width: 100px;
+                            height: 25px;
+                            background-color: blue;
+                            color: var(--branco);
+                            border: none;
+                            border-radius:20px ;
+                            
+                        }
+                    }
+
+
+                }
+            }
+        }
+    }
 }
-/*=======HOVER=========*/
-#link1:hover{
-    opacity: 0.5;
+
+/*=================HOVER & EFFECTS==============*/
+.btnBuy:hover{
+    opacity: .7;
 }
-#link2:hover{
-    opacity: 0.5;
-}
-#link3:hover{
-    opacity: 0.5;
-}
-#link4:hover{
-    opacity: 0.5;
-}
-.icon-menu:hover{
-    opacity: 0.5;
+
+.box:hover{
+    transform: scale(1.01);
 }
