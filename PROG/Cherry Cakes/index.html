@@ -18,21 +18,25 @@
         <div class="header-content">
             <div class="menus">
                 <ul class="links">
-                    <li><a href=""></a>Vitrine</li>
-                    <li><a href=""></a>Sobre</li>
-                    <li><a href=""></a>Contato</li>
+                    <li><a href="#creations">Creations</a></li>
+                    <li><a href="#whoweare">Sobre</a></li>
+                    <li><a href="">Contato</a></li>
                 </ul>
             </div>
             <div class="logo">
-                <img src="./Images/CherryCakes(cereja)[vetor].png">
+                <a href="./index.html"><img src="./Images/CherryCakes(cereja)[vetor].png"></a>
+               
             </div>
             <div class="shortcuts">
                 <div class="shorticon" id="icon1">
-                    <i class="bi bi-shop"></i>
+                    <a href="./Pages/cardapio.html"><i class="bi bi-shop"></i></a>
                 </div>
                 <div class="shorticon" id="icon2">
-
-                    <i class="bi bi-person-circle"></i>
+                    <i class="bi bi-person-circle" id="profileIcon"></i>
+                    <div class="dropdown" id="profileDropdown">
+                        <a href="./Pages/login.html" target="_blank" rel="noopener noreferrer">Login</a>
+                        <a href="./Pages/cadastro.html" target="_blank" rel="noopener noreferrer">Cadastro</a>
+                    </div>
                 </div>
             </div>
             
@@ -41,13 +45,16 @@
 
     <main>
         <!--======================LOGO AREA====================-->
+
         <section class="logo-area">
-            <div class="left-logo-area">
-                <img class="logo" src="./Images/CherryCakes(logo).png" alt="">
-            </div>
-            <div class="right-logo-area">
-                <div>
-                    <p class="slogan">Um novo jeito de ser doce!</p>
+            <div class="logo-area-container">
+                <div class="left-logo-area">
+                    <img class="logo" src="./Images/CherryCakes(logo).png" alt="">
+                </div>
+                <div class="right-logo-area">
+                    <div>
+                        <p class="slogan">Um novo jeito de ser doce!</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -55,9 +62,9 @@
         <!--==================OFFSALE AREA=====================-->
         <section class="offsale-area">
             <section class="offsale-title-area">
-                <div>
-                    <p class="title-offsale">MAIS PEDIDOS</p>
-                </div>
+                    <div class="title-offsale">
+                        <p >MAIS PEDIDOS</p>
+                    </div>
             </section>
 
             <!--CARDS LINE 1-->
@@ -169,34 +176,118 @@
         
         <!--=====================CREATIONS AREA=====================-->
         <section class="creations-area">
-            <div class="creations-container">
+            <div class="creations-container" id="creations">
                 <div class="creations-content">
                     <div class="title-container">
-
+                        <p>Cherry Creations</p>
                     </div>
                     <div class="btn-container">
                         <i class="bi bi-chevron-double-right"></i>
-                        <button class="btnCreations">VER MAIS</button>
+                        <button class="btnCreations">Ver Mais</button>
                         <i class="bi bi-chevron-double-left"></i>
                     </div>
                     <div class="link-container">
-                        <p>Quer saber mais sobre nós?<a href="">Clique Aqui!</a></p>
+                        <p>Quer saber mais sobre nós? <a href="">Clique Aqui!</a></p>
                     </div>
                 </div>
-
             </div>
         </section>
+
+
+        <!--=====================WHO-WE-ARE AREA=====================-->
+        <section class="whoweare-area">
+            <div class="whoweare-container" id="whoweare">
+                <div class="right">
+                    <div class="title">
+                        <p>QUEM NÓS SOMOS</p>
+                    </div>
+
+                    <div class="txt">
+                        <p>Bem-vindo à Cherry Cakes! Somos uma confeitaria apaixonada por criar momentos doces e memoráveis. Fundada por um grupo de amigos que compartilham o amor pela culinária, nossa missão é oferecer delícias feitas com carinho e ingredientes de alta qualidade. <br><br> Aqui, cada bolo, torta e cupcake é preparado artesanalmente, com receitas que combinam tradições familiares e toques modernos. Nos orgulhamos de nossa variedade, que inclui opções clássicas e criações exclusivas, sempre com um sabor irresistível. <br><br> Nosso espaço acolhedor é perfeito para um café da tarde, um encontro com amigos ou uma celebração especial. Além de atender a pedidos personalizados para festas, também promovemos oficinas de confeitaria, onde compartilhamos nosso conhecimento e amor pela arte de fazer doces. <br><br> Na Cherry Cakes, acreditamos que cada fatia traz felicidade. Venha nos visitar e descubra como podemos adoçar seu dia!</p>
+                    </div>
+                </div>
+                <div class="left">
+                    <img src="./Images/suporte-bolo.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!--=====================FEEDBACK AREA=====================-->
+        <section class="feedback-area">
+            <div class="feedback-container" id="contact">
+                <div class="feedback-content">
+                    <div class="left">
+                        <div class="title">
+                            <p class="titulo">Quer conversar?</p>
+                            <p class="subtitle">Envie pelo formulário</p>
+                        </div>
+                        <div class="form">
+                            <form action="">
+                                <label for="name">Nome</label>
+                                <input type="text" name>
+                                <label for="email">Email</label>
+                                <input type="email">
+                                <label for="comentario">Comentario</label>
+                                <textarea name="comentario" id=""></textarea>
+                            </form>
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </div>
+    
+                    <div class="right">
+                        <div class="contact">
+                            <div class="icons" id="icon1">
+                                <i class="bi bi-envelope-fill"></i>
+                                <p>cherrycakes@confeitaria.com.br</p>
+                            </div>
+
+                            <div class="icons" id="icon2">
+                                <i class="bi bi-telephone-fill"></i>
+                                <p>(45) 1234-5678</p>
+                            </div>
+
+                            <div class="icons" id="icon3">
+                                <i class="bi bi-house-fill"></i>
+                                <p>Rua dos Confeiteiros, 1234 - SP</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="social-media">
+            <div class="social-content">
+                <div class="title">
+                    <p>Nossas Redes</p>
+                </div>
+                <div class="socials">
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    
+                    
+                    
+                </div>
+            </div>
+            
+        </section>
+
+
+
+        <footer>
+            <div class="footer-container">
+                <div class="content">
+                    <div><p>CherryCakes Oficial&copy;</p></div>
+                    <div><img src="./Images/CherryCakes(logo).png" alt=""></div>
+                    <div><p>CEEP - Pedro Boaretto Neto</p></div>
+                </div>
+            </div>
+        </footer>
+
+
     </main>
-    <script src="./Scripts/password-eye.js"></script>
-    <script src="./Scripts/popup.js"></script>
     <script src="./Scripts/category-offsale.js"></script>
+    <script src="./Scripts/dropdown-menu.js"></script>
 
 </body>
-
-
-
-
-
-
-
 </html>

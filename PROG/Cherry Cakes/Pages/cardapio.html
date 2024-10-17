@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Styles/cardapio.css">
     <link rel="shortcut icon" href="../Images/CherryCakes(cereja).png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <title>Cherry Cakes</title>
+    <title>Cardápio</title>
 </head>
 
 <body>
@@ -14,61 +15,149 @@
         <div class="header-content">
             <div class="menus">
                 <ul class="links">
-                    <li><a href=""></a>Vitrine</li>
-                    <li><a href=""></a>Sobre</li>
-                    <li><a href=""></a>Contato</li>
+                    <li><a href="../index.html#creations">Creations</a></li>
+                    <li><a href="#whoweare">Sobre</a></li>
+                    <li><a href="">Contato</a></li>
                 </ul>
             </div>
             <div class="logo">
-                <img src="./Images/CherryCakes(cereja)[vetor].png">
+                <a href="../index.html"><img src="../Images/CherryCakes(cereja)[vetor].png"></a>
             </div>
             <div class="shortcuts">
                 <div class="shorticon" id="icon1">
-                    <i class="bi bi-shop"></i>
+                    <a href="./Pages/cardapio.html"><i class="bi bi-shop"></i></a>
                 </div>
                 <div class="shorticon" id="icon2">
-                    <i class="bi bi-person-circle"></i>
+                    <i class="bi bi-person-circle" id="profileIcon"></i>
+                    <div class="dropdown" id="profileDropdown">
+                        <a href="./Pages/login.html" target="_blank" rel="noopener noreferrer">Login</a>
+                        <a href="./Pages/cadastro.html" target="_blank" rel="noopener noreferrer">Cadastro</a>
+                    </div>
                 </div>
             </div>
             
         </div>
     </header>
+
+    <div id="cartModal" class="cart-modal" style="display: none;">
+        <div class="cart-modal-content">
+            <h2>Seu Carrinho</h2>
+            <div id="cartItemsContainer"></div>
+            <button onclick="hideCart()">Fechar Carrinho</button>
+        </div>
+    </div>
+
     <main>
         <div class="container-area">
             <div class="content-area">
                 <div class="first-area">
-                    <div class="search-area"></div>
+
+                    <div class="title-area">
+                        <div class="title">
+                            <p>Cardápio</p>
+                        </div>
+                    </div>
+                    <div class="search-area">
+                        <div class="searchbar-container">
+                            <input type="text" class="searchbar" placeholder="Pesquisar produtos...">
+                            <button class="searchbtn"><i class="bi bi-search"></i></button>
+                        </div>
+                        <div class="cart-btn">
+                            <button onclick="showCart()"><i class="bi bi-cart-fill"></i></button>
+                            <i class="bi bi-circle-fill" id="cartCountIndicator" style="display:none;"></i>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="second-area">
                     <div class="products-area">
-                        <div class="products">
-
-                            <div class="box" id="box1">
-                                <div class="box-l-container">
-                                    <img src="" alt="">
-                                </div>
-                                <div class="box-r-container">
-                                    <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime corporis, natus aspernatur facere sapiente voluptatibus officiis, qui quos ipsam laboriosam repellat, illo ut eum hic nesciunt iste consequuntur unde. Eaque!</div>
-                                    <div class="btn-container">
-                                        <button class="btnBuy">Comprar</button>
-                                    </div>
-                                </div>
+                        <div class="category-container">
+                            <div class="category">
+                                <p>BOLOS</p>
                             </div>
-
-                            <div class="box" id="box1">
-                                <div class="box-l-container">
-                                    <img src="" alt="">
-                                </div>
-                                <div class="box-r-container">
-                                    <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime corporis, natus aspernatur facere sapiente voluptatibus officiis, qui quos ipsam laboriosam repellat, illo ut eum hic nesciunt iste consequuntur unde. Eaque!</div>
-                                    <div class="btn-container">
-                                        <button class="btnBuy">Comprar</button>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
+                        <div class="bolos">
+                            <div class="box" id="box1" data-id="1">
+                                <div class="box-l-container">
+                                    <img src="../Images/cake-chocolate.jpg" alt="Bolo de Chocolate">
+                                </div>
+                                <div class="box-r-container">
+                                    <div class="desc">Bolo de Chocolate - Delicioso bolo com cobertura de chocolate</div>
+                                    <div class="btn-container">
+                                        <button class="btnBuy"><i class="bi bi-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="box" id="box2" data-id="2">
+                                <div class="box-l-container">
+                                    <img src="../Images/cake-redvelvet.png" alt="Bolo Red Velvet">
+                                </div>
+                                <div class="box-r-container">
+                                    <div class="desc">Bolo Red Velvet - Bolo clássico com cream cheese</div>
+                                    <div class="btn-container">
+                                        <button class="btnBuy"><i class="bi bi-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box" id="box3" data-id="3">
+                                <div class="box-l-container">
+                                    <img src="../Images/cake-pineapple.png" alt="Bolo Red Velvet">
+                                </div>
+                                <div class="box-r-container">
+                                    <div class="desc">Bolo de Abacaxi - Delicioso bolo com pedaços de abacaxi</div>
+                                    <div class="btn-container">
+                                        <button class="btnBuy"><i class="bi bi-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box" id="box6" data-id="6">
+                                <div class="box-l-container">
+                                    <img src="../Images/cake-pineapple.png" alt="Bolo Red Velvet">
+                                </div>
+                                <div class="box-r-container">
+                                    <div class="desc">Bolo de Abacaxi - Delicioso bolo com pedaços de abacaxi</div>
+                                    <div class="btn-container">
+                                        <button class="btnBuy"><i class="bi bi-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="category-container">
+                            <div class="category">
+                                <p>DOCES</p>
+                            </div>
+                        </div>
+                        <div class="doces">
+                            <div class="box" id="box4" data-id="4">
+                                <div class="box-l-container">
+                                    <img src="../Images/candy-brownie.png" alt="Bolo de Chocolate">
+                                </div>
+                                <div class="box-r-container">
+                                    <div class="desc">Brownie - O clássico brownie, mas feito pela Cherry Cakes</div>
+                                    <div class="btn-container">
+                                        <button class="btnBuy"><i class="bi bi-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="box" id="box5" data-id="5">
+                                <div class="box-l-container">
+                                    <img src="../Images/candy-cherrycupcake.webp" alt="Bolo Red Velvet">
+                                </div>
+                                <div class="box-r-container">
+                                    <div class="desc">Cherry Cupcake - Cupcake de cereja da Cherry Cakes</div>
+                                    <div class="btn-container">
+                                        <button class="btnBuy"><i class="bi bi-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
             </div>
@@ -78,4 +167,6 @@
     <footer>
     </footer>
 </body>
+    <script src="../Scripts/cart.js"></script>
+    <script src="../Scripts/search.js"></script>
 </html>

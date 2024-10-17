@@ -3,7 +3,7 @@
 
 :root{
     --rosa-claro:rgb(255, 190, 212);
-    --rosa:rgb(250, 140, 177);
+    --rosa:rgb(236, 42, 133);
     --vermelho:rgb(255, 86, 86);
     --verde:rgb(125, 255, 125);
     --branco:rgb(255, 255, 255);
@@ -41,7 +41,7 @@ html{
             flex-direction: column;
             align-items: center;
             padding-top: 70px;
-            gap: 70px;
+            gap: 50px;
             padding-inline:50px;
             background-color: var(--rosa);
 
@@ -75,7 +75,8 @@ html{
                 } 
             }
 
-            & .btn-cad{
+            & .btn-log{
+                width: 220px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -84,6 +85,7 @@ html{
                 font-family: GeorgeCafe;
                 gap: 10px;
                 font-weight: bold;
+                
 
                 & button{
                     width: 200px;
@@ -94,8 +96,13 @@ html{
                     color: var(--vermelho);
                     background-color: white;
                     border:none;
-                    border-radius: 40px;
-                    
+                    border-radius: 45px;
+                }
+
+                & button:hover{
+                    cursor: pointer;
+                    opacity: 0.7;
+                    transform: scale(0.95);
                 }
             }
         }
@@ -113,7 +120,7 @@ html{
 
 .box{
     width: 350px;
-    height: 470px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -170,31 +177,6 @@ html{
                 }
 
             }
-        }
-
-        & .links{
-            width: 300px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: -20px;
-            padding-inline: 10px;
-        }
-
-        & .remember{
-            width: 170px;
-            align-items: center;
-            flex-direction: row-reverse;
-            gap: 10px;
-            display: flex;
-        }
-
-        & .lost-password{
-            display: flex;
-            justify-content: right;
-            align-items: center;
-            width: 100%;
-            height: 30px;
         }
 
         & .enviar{

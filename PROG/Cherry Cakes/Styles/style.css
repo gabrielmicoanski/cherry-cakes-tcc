@@ -30,7 +30,7 @@ header{
     height: 60px;
     display: flex;
     justify-content: center;
-    z-index: 2;
+    z-index: 3;
 
     & .header-content{
         width: 1000px;
@@ -47,11 +47,13 @@ header{
                 list-style-type: none;
             }
 
-            & li{
+            & li a{
                 font-size: 20px;
                 color: white;
                 font-family: GeorgeCafe;
                 font-weight: bold;
+                user-select:none;
+                text-decoration: none;
             }
 
             & li:hover{
@@ -66,6 +68,7 @@ header{
             height: 60px;
 
             & img{
+                user-select:none;
                 width: 60px;
                 height: 60px;
             }
@@ -88,6 +91,28 @@ header{
             }
         }
     }
+    
+    & .dropdown {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 150px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    & .dropdown a {
+        color: black;
+        font-family: GeorgeCafe;
+        font-weight: bold;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    & .dropdown a:hover {
+        background-color: #f1f1f1;
+    }
 }
 
 /*====================CONTENT==================*/
@@ -96,13 +121,19 @@ header{
     /*LOGO AREA*/
         .logo-area{
             display: flex;
-            justify-content: space-evenly;
+            justify-content: center;
             background-color: white;
             background-image: url("../Images/background-cupcakes.png");
             border-bottom:solid var(--rosa-claro) 4px ;
-            padding-inline: 150px;
             scroll-snap-align: start;
             backdrop-filter: blur(50px) ;
+        }
+
+        .logo-area-container{
+            display:flex;
+            width: 1000px;
+            height: 100%;
+            justify-content: space-between;
         }
 
         .slogan{
@@ -126,12 +157,19 @@ header{
         }
 
         .offsale-title-area{
-            color: black;
-            font-weight: 300;
-            font-size: 40px;
-            font-family: GeorgeCafe;
+            width: 100%;
+            display: flex;
+            justify-content: center;       
             text-align: center;
-            padding-top: 20px;
+            padding-top: 50px;
+            
+            & .title-offsale{
+                width: 400px;
+                height: 45px;
+                color: black;
+                font-size: 40px;
+                font-family: GeorgeCafe;
+            }
         }
 
         .cards{
@@ -253,11 +291,331 @@ header{
             background-size: cover;
 
             & .creations-container{
+                display: flex;
+                justify-content: center;
                 width: 100%;
                 height: 100%;
-                background-color: rgba(0, 0, 0, 0.511);
+                background-color: rgba(0, 0, 0, 0.6);
+            }
+
+            & .creations-content{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                gap: 50px;
+                width: 1000px;
+                height:600px;
+                
+                & .title-container{
+                    font-family:MyLove;
+                    color: white;
+                    font-size: 100px;
+                    text-shadow: 4px 3px 2px var(--rosaa);
+
+                }
+
+                & .btn-container{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 300px;
+                    height: 70px;
+                    gap: 20px;
+
+                    & i{
+                        font-size: 50px;
+                        color: var(--rosaa);
+                    }
+
+                    & button{
+                        width: 150px;
+                        height: 40px;
+                        border: none;
+                        border-radius: 40px;
+                        background-color: var(--rosaa);
+                        color: var(--branco);
+                        font-family: GeorgeCafe;
+                        font-size: 23px;
+                        font-weight: bold;
+
+                    }
+                }
+
+                & .link-container{
+                    width: 500px;
+                    height: 20px;
+                    font-size:20px;
+                    color: white;
+                    font-family: GeorgeCafe;
+                    text-align: center;
+
+                    & a{
+                        font-size:20px;
+                        color: var(--rosa);
+                        font-family: GeorgeCafe; 
+                        font-weight: bold;
+                    }
+                }
             }
         }
+
+        /*WHO WE ARE*/
+            .whoweare-area{
+                width: 100%;
+                height: 800px;
+                display: flex;
+                justify-content: center;
+
+                & .whoweare-container{
+                    display: flex;
+                    justify-content: space-evenly;
+                    flex-direction: row-reverse;
+                    padding-top: 100px;
+                    width: 1200px;
+                    height: 100%;
+
+                    & .right{
+                        width: 500px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        & .title{
+                            width: 400px;
+                            height: 45px;
+                            color: black;
+                            font-size: 40px;
+                            font-family: GeorgeCafe;
+                            margin-bottom: 50px;
+                        }
+
+                        & .txt{
+                            font-size: 20px;
+                            font-family: GeorgeCafe;
+                            font-weight: bold;
+                        }
+                    }
+
+                    & .left{
+                        & img{
+                            width: 400px;
+                            height: 400px;
+                        }
+                    }
+                }
+            }
+
+            /*FEEDBACK AREA*/
+                .feedback-area{
+                    width: 100%;
+                    height: 800px;
+                    display: flex;
+                    justify-content: center;
+                    background-image: url("https://www.iped.com.br/_upload/galleries/2023/05/26/curso-confeitaria-64711217be114.jpg");
+                    background-size: cover;
+
+                    & .feedback-container{
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0, 0, 0, 0.514);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        & .feedback-content{
+                            width: 1200px;
+                            height: 700px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            & .left{
+                                width: 50%;
+                                height: 600px;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                border-right: solid var(--branco);
+
+                                & .title{
+                                    display:flex;
+                                    justify-content: center;
+                                    flex-direction: column;
+                                    align-items: center;
+
+                                    & .titulo{
+                                        color: white;
+                                        font-size: 50px;
+                                        font-family: Saturday;
+                                        text-shadow: 3px 2px 1px var(--rosaa);
+                                    }
+
+                                    & .subtitle{
+                                        font-size: 25px;
+                                        font-family: GeorgeCafe;
+                                        font-weight: bold;
+                                        color: white;
+                                    }
+                                }
+                            }
+
+                            & .right{
+                                width: 50%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                & .contact{
+                                    width: 500px;
+                                    height: 600px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    flex-direction: column;
+                                    gap: 50px;
+
+                                    & .icons{
+                                        width: 350px;
+                                        display: flex;
+                                        align-items: center;
+                                        gap:20px;
+
+                                        & i{
+                                            font-size: 40px;
+                                            color: var(--rosa-claro);
+                                        }
+
+                                        & p{
+                                            color: white;
+                                            font-size: 20px;
+                                            font-family: GeorgeCafe;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .form{
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+
+                    & form{
+                        width: 400px;
+                        display: flex;
+                        flex-direction: column;
+                        
+                        & label{
+                            color: white;
+                            font-family: GeorgeCafe;
+                            font-size: 20px;
+                            margin-top: 20px;
+                        }
+                        
+                        & textarea{
+                            height: 120px;
+                            width: 100%;
+                            resize: none;
+                        }
+                        
+                        & input{
+                            width: 100%;
+                            height: 40px;
+                            margin: 5px 0px 10px 0px;
+                        }                        
+                    }
+
+                    & button{
+                        color: white;
+                        font-size: 20px;
+                        font-family: GeorgeCafe;
+                        background-color: var(--rosaa);
+                        border: none;
+                        border-radius: 20px;
+                        margin-inline: 50px;
+                        margin-top: 30px;
+                        width: 200px;
+                        height: 50px;
+                    }
+                }
+
+        /*SOCIAL MEDIA*/
+            .social-media{
+                width: 100%;
+                height: 300px;
+                display: flex;
+                justify-content: center;
+
+                & .social-content{
+                    display: flex;
+                    width: 1000px;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 50px;
+
+                    & .title{
+                        font-size: 40px;
+                        font-family: GeorgeCafe;
+                        font-weight: bold;
+                        text-shadow: 2px 1px 1px var(--rosa-claro);
+                    }
+
+                    & .socials{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 30px;
+
+                        & i{
+                            font-size: 40px;
+                            color: black;
+                        }
+                    }
+                }
+            }
+
+
+/*===========FOOTER==============*/
+footer{
+    width: 100%;
+    height: 150px;
+    background-color: var(--rosa-claro);
+
+    & .footer-container{
+        display: flex;
+        justify-content: center;
+
+        & .content{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 1200px;
+
+            & img{
+                width: 110px;
+                height: 110px;
+            }
+
+            & p{
+                font-size: 20px;
+                font-family: GeorgeCafe;
+                font-weight: bold;
+                color: rgb(0, 0, 0);
+            }
+
+
+        }
+    }
+}
+
+
+
+
+
 
 
 
