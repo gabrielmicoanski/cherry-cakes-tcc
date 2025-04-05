@@ -3,7 +3,7 @@
 
 :root{
     --rosa-claro:rgb(255, 190, 212);
-    --rosa:rgb(236, 42, 133);
+    --rosa:rgb(250, 140, 177);
     --vermelho:rgb(255, 86, 86);
     --verde:rgb(125, 255, 125);
     --branco:rgb(255, 255, 255);
@@ -85,7 +85,6 @@ html{
                 font-family: GeorgeCafe;
                 gap: 10px;
                 font-weight: bold;
-                
 
                 & button{
                     width: 200px;
